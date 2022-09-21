@@ -6,11 +6,13 @@ public class Main {
         Scanner leia = new Scanner(System.in);
         ArrayList<MediaMes> listaDeMedias = new ArrayList<>();
         Integer mediaPorMes;
+        Integer totalSomaMedia = 0;
 
         // Pegando Media de Temperatura por mes
         for (int i = 1; i <= 6; i++) {
             System.out.print("Digite a temperatura media do mes " + (i) + " : ");
             mediaPorMes = leia.nextInt();
+            totalSomaMedia += mediaPorMes;
             if(i == 1) listaDeMedias.add(new MediaMes(i, "Janeiro", mediaPorMes));
             if(i == 2) listaDeMedias.add(new MediaMes(i, "Fevereiro", mediaPorMes));
             if(i == 3) listaDeMedias.add(new MediaMes(i, "Marco", mediaPorMes));
@@ -18,7 +20,11 @@ public class Main {
             if(i == 5) listaDeMedias.add(new MediaMes(i, "Maio ", mediaPorMes));
             if(i == 6) listaDeMedias.add(new MediaMes(i, "Junho", mediaPorMes));
         }
-        /*System.out.println(listaDeMedias.toString());*/
+
+        Integer mediaTotalSemestre = totalSomaMedia / listaDeMedias.size();
         
+
+
+
     }
 }
