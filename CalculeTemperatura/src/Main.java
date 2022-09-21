@@ -23,6 +23,7 @@ public class Main {
         // Calculando media
         Integer mediaTotalSemestre = totalSomaMedia / listaDeMedias.size();
         System.out.println("-------------------------------------------------------------------");
+        
         // Exibindo temperaturas e meses a cima da média
         System.out.println("- Meses que tiveram a temperatura a cima da media : ");
         for (int i = 0; i < 6; i++) {
