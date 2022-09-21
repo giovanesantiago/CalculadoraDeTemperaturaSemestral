@@ -3,7 +3,7 @@ public class MediaMes {
     private Integer idMes;
     private String mes;
     private Integer temperaturaMedia;
-    
+
 
     public MediaMes(Integer idMes, String mes, Integer temperaturaMedia) {
         this.idMes = idMes;
