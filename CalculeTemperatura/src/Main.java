@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -23,15 +24,17 @@ public class Main {
         // Calculando media
         Integer mediaTotalSemestre = totalSomaMedia / listaDeMedias.size();
         System.out.println("-------------------------------------------------------------------");
-        
+
+        // Removendo temperaturas abaixo da media
+        listaDeMedias.removeIf(next -> next.getTemperaturaMedia() < mediaTotalSemestre);
+
         // Exibindo temperaturas e meses a cima da média
         System.out.println("- Meses que tiveram a temperatura a cima da media : ");
-        for (int i = 0; i < 6; i++) {
-            if(listaDeMedias.get(i).getTemperaturaMedia() > mediaTotalSemestre){
-                System.out.println(" Mes : " + listaDeMedias.get(i).getIdMes() + " - " + listaDeMedias.get(i).getMes()
-                        + " : Media - " + listaDeMedias.get(i).getTemperaturaMedia());
-            }
+        for (MediaMes next : listaDeMedias) {
+            System.out.println(" Mes : " + next.getIdMes() + " - " + next.getMes()
+                    + " : Media - " + next.getTemperaturaMedia());
         }
+
         System.out.println("-------------------------------------------------------------------");
 
 
