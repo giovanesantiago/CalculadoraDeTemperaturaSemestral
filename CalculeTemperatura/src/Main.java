@@ -20,9 +20,19 @@ public class Main {
             if(i == 5) listaDeMedias.add(new MediaMes(i, "Maio ", mediaPorMes));
             if(i == 6) listaDeMedias.add(new MediaMes(i, "Junho", mediaPorMes));
         }
-
+        // Calculando media
         Integer mediaTotalSemestre = totalSomaMedia / listaDeMedias.size();
-        
+        System.out.println("-------------------------------------------------------------------");
+        // Exibindo temperaturas e meses a cima da média
+        System.out.println("- Meses que tiveram a temperatura a cima da media : ");
+        for (int i = 0; i < 6; i++) {
+            if(listaDeMedias.get(i).getTemperaturaMedia() > mediaTotalSemestre){
+                System.out.println(" Mes : " + listaDeMedias.get(i).getIdMes() + " - " + listaDeMedias.get(i).getMes()
+                        + " : Media - " + listaDeMedias.get(i).getTemperaturaMedia());
+            }
+        }
+        System.out.println("-------------------------------------------------------------------");
+
 
 
 
